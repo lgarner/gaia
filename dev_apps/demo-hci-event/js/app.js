@@ -33,10 +33,14 @@ window.addEventListener('DOMContentLoaded', function() {
     log('HCI Event Transaction message handler fired, count ' + firedCount +
         ', message : ' + JSON.stringify(msg));
 
-    var data = msg.hciEventTransaction;
+    var data = msg;
     updateUIText('count', firedCount);
+    updateUIText('origin', data.origin);
     updateUIText('aid', byteArrayToHex(data.aid));
     updateUIText('data', byteArrayToHex(data.payload));
+    if (data.seName) {
+      updateUIText('seName', data.seName);
+    }
     updateUIText('time', new Date());
   });
 });

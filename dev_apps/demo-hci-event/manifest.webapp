@@ -16,6 +16,6 @@
   "messages": [
      { "nfc-hci-event-transaction": "/index.html" }
   ],
-  "hci-evt-transaction-src": ["*"],
+  "secure_element_access": ["*"],
   "default_locale": "en"
 }
